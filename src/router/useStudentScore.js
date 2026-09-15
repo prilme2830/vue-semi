@@ -10,6 +10,9 @@ export function useStudentScore() {
 
   function deductPoints() {
     score.value--;
+    if (score.value < 0) {
+      score.value = 0;
+    }
   }
 
   function resetScore() {
